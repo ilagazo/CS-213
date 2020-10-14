@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Webpage Browser Title -->
+  <title>Ivanro Lagazo's Home Page</title>
+  <!-- Link to External CSS StyleSheet-->
+  <link rel="stylesheet" href="assign03.css">
+  <!-- Internal CSS Style -->
+  <style>
+    header {
+      background: rgb(78, 78, 88);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 50px;
+    }
+
+    footer {
+      background: rgb(78, 78, 88);
+      color: white;
+      text-align: center;
+      padding: 0.5px;
+    }
+
+    footer a:link,
+    a:visited {
+      background-color: lightsteelblue;
+      color: black;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    footer a:hover,
+    a:active {
+      background-color: steelblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text">
+    <!-- Webpge Header -->
+    <header>Welcome to Ivanro Lagazo's Homepage!</header>
+
+    <!-- Navigation Panel -->
+    <div class="nav">
+      <a href="#AboutMe">About Me</a>
+      <a href="#Schedule">Class Schedule</a>
+      <a href="#Feedback">Feedback</a>
+      <a href="#MessingAround">Messing Around</a>
+      <a href="https://www.byui.edu/">BYU-I Homepage</a>
+      <a href="https://www.iconfitness.com/">My Job</a>
+      <a href="https://www.facebook.com/ivanro.lagazo">My Facebook</a>
+      <a href="https://theuselessweb.com/">Games</a>
+      <a href="../index.html">CS213 Assignments</a>
+    </div>
+
+    <!-- Introductory Information -->
+    <div>
+      <a id="AboutMe"></a>
+      <h1>A Little Bit About Me</h1>
+      <!-- Image code for Myself -->
+      <img src="../me.jpg" alt="Ivanro Lagazo"
+        style="width:200px; height:300px; display:block; margin-left:auto; margin-right:auto">
+      <p><b>Name: </b>Ivanro Lagazo<br>
+        <b>Major: </b>Software Engineering<br>
+        <b>Origin: </b>Southern California<br><br>
+        As you already know, my name is Ivanro Lagazo. That is pronounced Ivan-roh La-ga-zo.
+        I currently live in Logan, UT with my wife Josie and my daughter Aloria.
+        I am a Web Quality Assurance Technician for ICON Health & Fitness. We specialize in
+        the creation of affordable and innovatiove excercise equipment.
+        I am excited to learn about Web Engineering and all its accompanying programming langauges.
+        Overall, it is nice to meet you whomever you are!</p>
+    </div>
+
+    <!-- Favorite Quote Code -->
+    <hr>
+    <div class="quote">
+      <blockquote>
+        <b>Favorite Quote:</b> <i>"Accept the unexpected." - Lost in Space</i>
+      </blockquote>
+    </div>
+
+    <!-- Image code for additional image -->
+    <div class="link">
+      <p> Click on me to watch the trailer</p>
+      <a target="_blank" href="https://www.youtube.com/watch?v=fzmM0AB60QQ">
+        <img src="LostInSpace.jpg" alt="Netflix Series: Lost In Space"></a>
+    </div>
+
+    <!-- This code is to show how to uses different fonts,margins,colors,etc. -->
+    <a id="MessingAround"></a>
+
+    <hr>
+    <h2>This Is Me Messing Around With Different Fonts & Styles!</h2>
+    <p style="font-family:verdana;color:red;text-align:left;font-size:15px">
+      This example will describe the very first time I learned to code.</p>
+    <p style="font-family:courier;color:darkolivegreen;
+                  text-align:right;font-size:20px">
+      I decided to take CS124:Introduction to Software Engineering. I remember writing
+      the code for the "Hello World" assignment and the joy it brought me.</p>
+    <p style="font-family:schriftbild;color:magenta;
+                  text-align:left;font-size:25px">
+      I feel the same joy learning HTML and so to reiterate that message of every
+      first-time programmer....</p>
+    <p style="font-family:cursive;color:navy;font-size:150%;
+                  text-align:center;font-size:30px">
+      <strong>HELLO WORLD!</strong></p>
+    <hr>
+
+    <!-- Table for Class Schedule -->
+    <a id="Schedule"></a>
+    <h2>Class Schedule</h2>
+    <div class="table">
+      <table>
+        <tr>
+          <th>Course #</th>
+          <th>Course Description</th>
+          <th>Sec #</th>
+          <th>Class Time</th>
+          <th>Class Location</th>
+        </tr>
+        <tr>
+          <td>CS213</td>
+          <td>Web Engineering I</td>
+          <td>02</td>
+          <td>N/A</td>
+          <td>Online</td>
+        </tr>
+        <tr>
+          <td>CS308</td>
+          <td>Technical Communications</td>
+          <td>02</td>
+          <td>N/A</td>
+          <td>Online</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+
+    <!--- Form -->
+    <a id="Feedback"></a>
+    <h2>Feedback:</h2>
+    <form style="font-size:12px;text-align:left">
+      <!-- Inputs -->
+      First name:<br>
+      <input type="text" name="firstname"><br>
+      Last name:<br>
+      <input type="text" name="lastname"><br>
+
+      <!-- Radio Checklist -->
+      <br>Mark One of the Following:<br>
+      <input type="radio" name="profession" value="student" checked> Student<br>
+      <input type="radio" name="profession" value="professor"> Professor<br>
+      <input type="radio" name="profession" value="other"> Other<br><br>
+
+      <!-- Checkboxes -->
+      Mark the Attributes of My Webpage:<br>
+      <input type="checkbox" name="grade" value="Professional"> Professional<br>
+      <input type="checkbox" name="grade" value="Organized"> Organized<br>
+      <input type="checkbox" name="grade" value="Clean"> Clean<br><br>
+
+      <!-- Drop Down List-->
+      Overall Rating:
+      <select name="grade">
+        <option value="excellent">Excellent!</option>
+        <option value="average">Average</option>
+        <option value="terrible">Terrible...</option>
+      </select><br><br>
+
+      <!-- Text Area -->
+      <textarea rows="5" cols="100">
+               Please enter a comment about my webpage here. Max Letters: 500
+             </textarea><br><br>
+
+      <!-- Submit & Reset -->
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+      <p>If You Enjoyed This Webpage,Please Check Out My Other Projects !</p>
+      <a href="../index.html">CS213 Assignments</a>
+    </footer>
+  </div>
+</body>
+
+</html>

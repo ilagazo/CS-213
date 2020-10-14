@@ -1,0 +1,39 @@
+body {
+    background-color: #1a1c20;
+}
+
+#title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-color: #F4F4F4;
+    position: relative;
+}
+
+.content {
+    background-color: #F0A500;
+    width: auto;
+    margin: auto 10px;
+}
+
+#menuBarList {
+    quotes: ">""<";
+    color: #1a1c20;
+    font-size: 20px;
+}
+
+#text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1a1c20;
+    text-decoration: underline wavy #1a1c20;
+    letter-spacing: 10px;
+    line-height: 200%;
+    background-color: #cf7500;
+    white-space: normal;
+}
+
+#sidebar,
+#bottom {
+    font-family: fantasy;
+    color: ghostwhite;
+    background-color: #1a1c20;
+}

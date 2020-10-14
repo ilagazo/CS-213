@@ -1,0 +1,39 @@
+.document {
+    font-family: "Bookman";
+}
+body {
+    background-color: #D7CEC7;
+
+}
+
+.content {
+    background-color:#E5D3B3;
+    border-radius: 25px;
+    border: 2px solid tan;
+}
+
+#title {
+    background-color: #D7CEC7;
+}
+
+#text {
+    background-color: #565656;
+    border-radius: 10px;
+}
+
+#sidebar {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #76323F;
+    border-radius: 10px;
+}
+
+#bottom {
+    background-color: #C09F80;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+h1{
+    font-style: italic;
+}

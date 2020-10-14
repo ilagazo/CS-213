@@ -1,0 +1,30 @@
+.document {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content {
+    background-color:#E5D3B3;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+#title {
+    background-color: #CC6600;
+}
+
+#text {
+    background-color: #CC6600;
+}
+
+#sidebar {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bottom {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+h1{
+    text-decoration: underline;
+}
