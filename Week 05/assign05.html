@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- https://colorhunt.co/palette/196113-->
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+        header {
+            background-color: #1b262c;
+            text-align: center;
+            width: 100%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #0f4c75;
+        }
+
+        .flex-container > div {
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .description {
+            background-color: #3282b8;
+        }
+
+        footer {
+            background-color: #bbe1fa;
+            text-align: center;
+        }
+
+        /* Large devices and down */
+      @media screen and (max-width: 992px) {
+          .row {
+              flex: 100%;
+              max-width: 100%;
+          }
+      }
+      /* Medium Devices and down */
+      @media (max-width: 768px) {
+          .column {
+              flex: 100%;
+              max-width: 100%;
+          }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Hobbies</h1>
+    </header>
+    
+    <div class="flex-container">
+        <div>
+            <img src="zelda.jpg" alt="Zelda Series">
+        </div>
+        <div>
+            <img src="fishing.jpg" alt="Fishing Hobby">
+        </div>
+        <div>
+            <img src="shooting.jpg" alt="Shooting Hobby">
+        </div>  
+
+      </div>
+
+      <div class="description">
+        <p>Test</p>
+      </div>
+
+    <footer> fOOTER</footer>
+</body>
+</html>
