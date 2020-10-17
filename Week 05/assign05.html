@@ -1,84 +1,230 @@
 <!DOCTYPE html>
-
-<!-- https://colorhunt.co/palette/196113-->
-
 <html lang="en">
+
 <head>
+    <title>Ivanro's Lagazo Hobbies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             background-color: #eeeeee;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
         header {
+            text-align: center;
+            font-size: 25px;
+            width: 100%;
+            color: #1b262c;
+            overflow: hidden;
+        }
+
+        .quote {
             background-color: #1b262c;
             text-align: center;
+            color: #eeeeee;
+            overflow: hidden;
             width: 100%;
+            justify-content: center;
+            font-size: large;
+            text-transform: capitalize;
+            letter-spacing: 0.25em;
+        }
+
+        .description {
+            background-color: #0f4c75;
+            overflow: hidden;
+            text-align: center;
+            justify-content: center;
+            font-size: 1.25em;
         }
 
         .flex-container {
             display: flex;
             flex-wrap: wrap;
-            background-color: #0f4c75;
+            background-color: #3282b8;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
 
-        .flex-container > div {
-            margin: 10px;
-            padding: 20px;
+        .flex-container>div {
+            margin: 5px;
+            padding: 5px;
             font-size: 30px;
+            position: relative;
+            text-align: center;
         }
 
         img {
-            width: 100px;
-            height: 100px;
+            width: 400px;
+            height: 200px;
+            box-shadow: 0 0 12px rgb(63, 63, 63);
+            border-radius: 10px;
         }
 
-        .description {
-            background-color: #3282b8;
+        img:hover {
+            opacity: 0.3;
         }
+
+        .flex-container a {
+            text-align: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        .middle-text {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .item:hover .middle-text {
+            opacity: 1;
+        }
+
 
         footer {
             background-color: #bbe1fa;
             text-align: center;
+            overflow: hidden;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #1b262c;
+        }
+
+        footer a:hover {
+            color: #eeeeee;
         }
 
         /* Large devices and down */
-      @media screen and (max-width: 992px) {
-          .row {
-              flex: 100%;
-              max-width: 100%;
-          }
-      }
-      /* Medium Devices and down */
-      @media (max-width: 768px) {
-          .column {
-              flex: 100%;
-              max-width: 100%;
-          }
-      }
+        @media screen and (max-width: 992px) {
+            .flex-container {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Medium Devices and down */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex: 100%;
+                max-width: 100%;
+            }
+
+            img {
+                max-width: 400px;
+                width: 100%;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>My Hobbies</h1>
+        <h1>Ivanro Lagazo's Hobbies</h1>
     </header>
-    
+
+    <div class="quote">
+        <p>"No man is really happy or safe without a hobby." - William Osler</p>
+    </div>
+
+    <div class="description">
+        <p>This is a list of my hobbies. Please enjoy learning about them.
+            Every hobby I learn is a new piece of wisdom I enjoy with my
+            friends and family. <br><br>Hover over the image and click on the words to learn more!
+        </p>
+    </div>
+
     <div class="flex-container">
-        <div>
-            <img src="zelda.jpg" alt="Zelda Series">
+        <div class="item">
+                <img class="bottom" src="videogames.jpg" alt="Video Game Hobby">
+                <a target="_blank" href="https://steamcommunity.com/profiles/76561198016559234">
+                <div class="middle-text">
+                    <p>Video Games</p>
+                </div>
+            </a>
         </div>
-        <div>
-            <img src="fishing.jpg" alt="Fishing Hobby">
+        <div class="item">
+                <img src="fishing.jpg" alt="Fishing Hobby">
+                <a target="_blank" href="https://fishbrain.com/">
+                <div class="middle-text">
+                    <p>Fishing</p>
+                </div>
+            </a>
         </div>
-        <div>
-            <img src="shooting.jpg" alt="Shooting Hobby">
-        </div>  
+        <div class="item">
+                <img src="shooting.jpg" alt="Shooting Hobby">
+                <a target="_blank" href="https://palmettostatearmory.com/">
+                <div class="middle-text">
+                    <p>Shooting Firearms</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="programming.jpg" alt="Computer Science Hobby">
+                <a target="_blank" href="https://github.com/ilagazo">
+                <div class="middle-text">
+                    <p>Computer Science</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="sleeping.jpg" alt="Sleeping Hobby">
+                <a target="_blank" href="https://www.sleepfoundation.org/">
+                <div class="middle-text">
+                    <p>Sleeping</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="camping.jpg" alt="Camping Hobby">
+                <a target="_blank" href="https://www.nps.gov/index.htm">
+                <div class="middle-text">
+                    <p>Camping</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="hiking.jpg" alt="hiking Hobby">
+                <a target="_blank" href="https://www.alltrails.com/">
+                <div class="middle-text">
+                    <p>Hiking</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="traveling.jpg" alt="Traveling Hobby">
+                <a target="_blank" href="https://www.airbnb.com/">
+                <div class="middle-text">
+                    <p>Traveling</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+                <img src="3d-printer.jpg" alt="3d-printer Hobby">
+                <a target="_blank" href="https://3dprintingindustry.com/3d-printing-basics-free-beginners-guide">
+                <div class="middle-text">
+                    <p>3-D Printing</p>
+                </div>
+            </a>
+        </div>
+    </div>
 
-      </div>
-
-      <div class="description">
-        <p>Test</p>
-      </div>
-
-    <footer> fOOTER</footer>
+    <footer>
+        <p>Images on this page were pulled from Google Images and all ownership belongs to their
+            respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                Assignments</a>
+        </p>
+    </footer>
 </body>
+
 </html>
