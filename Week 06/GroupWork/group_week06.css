@@ -1,0 +1,132 @@
+/* Section 2 has the id flex_second. You must only use FlexBox for this section.
+1) Place the form labels and input elements in a single column with the form labels and input elements stacked on top of each other.
+2) The individual radio buttons and checkboxes must be stacked on top of each other. 
+
+Author: Ivanro Lagazo
+*/
+
+#flex_second {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+
+.form-row>button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+#name,
+#address,
+#phone,
+#email,
+#color {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hair,
+#cookie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Section 3 has the id grid_first. You must only use CSS Grid for this section. At all sizes, the articles must have a 1rem gap between each other.
+Small size: Place the articles in a single column.
+Medium size: Place the articles in two columns of equal widths.
+Large size: Place the articles in four columns of equal widths. 
+
+Author: Ivanro Lagazo
+*/
+
+#grid_first {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 1rem 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+	#grid_first {
+		grid-template-columns: auto auto;
+		grid-gap: 1rem 1rem;		
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#grid_first {
+		grid-template-columns: auto;
+		grid-gap: 1rem;		
+	}
+}
+
+/* Section 4 has the id grid_second. You must only use CSS Grid for the main layout, but you must only use FlexBox for laying out the contents of box9. At all sizes, the divs must have a 1rem gap between each other. At all sizes the divs must be a minimum of 100px tall.
+1) Small size:
+    Place the divs in a single column.
+    The contents of box9 must be placed in a column so that the items are spaced evenly and stretched to fit box9.
+2) Medium size:
+    Place the divs in 2 columns of equal widths.
+    Box1 must span 2 columns and take up 2 rows.
+    The contents of box9 must be placed in a row, centered within box9, and allowed to wrap.
+3) Large size:
+    Place the divs in 3 columns of equal widths.
+    Box1 must span 3 columns and take up 2 rows.
+    The contents of box9 must still be placed in a row and centered within box9, but cannot wrap. 
+    
+    Author: Jonah White
+    */
+
+    @media only screen and (min-width: 600px) {
+        #grid_second {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+    
+        [class*="box1 white_rounded"]{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    
+        [class="box9 white_rounded"] {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        #grid_second {
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+    
+        [class*="box1 white_rounded"]{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    
+        [class="box9 white_rounded"] {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+    
+        [class="box9 white_rounded"] > div {
+            width: 15%;
+            text-align: center;
+        }
+    }
+    
+    #grid_second > div {
+        min-height: 100px;
+        gap: 1rem;
+    }
+    
