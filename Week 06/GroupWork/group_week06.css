@@ -37,7 +37,6 @@ Author: Ivanro Lagazo
     align-items: flex-start;
 }
 
-
 /* Section 3 has the id grid_first. You must only use CSS Grid for this section. At all sizes, the articles must have a 1rem gap between each other.
 Small size: Place the articles in a single column.
 Medium size: Place the articles in two columns of equal widths.
