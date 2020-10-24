@@ -16,6 +16,11 @@ body {
   height: auto;
 }
 
+.item1 > h1 {
+  line-height: 75px;
+  flex-wrap: wrap;
+}
+
 .item2 { 
   grid-area: left; 
   display: flex;
@@ -47,7 +52,19 @@ body {
    padding: 10px;
  }
 
-.item4 { grid-area: footer; }
+
+ .item3 > a:hover {
+  background-color: gray;
+}
+
+.item4 { 
+  grid-area: footer;
+  font-size: 12px; 
+}
+
+.item4 > p > a:hover {
+  background-color: gray;
+}
 
 .item5 { 
   grid-area: nav;
@@ -55,10 +72,23 @@ body {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  font-size: 1.5em;
 }
 
 .item5 > a {
   padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+.item5 > a:hover {
+  background-color: gray;
+}
+
+.item5 > a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .grid-container {
@@ -77,11 +107,13 @@ body {
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.753);
   text-align: center;
+  padding: 10px;
 }
 
 h2, h3 {
   text-decoration: underline;
   line-height: 0px;
+  flex-wrap: wrap;
 }
 
  /* Medium Devices and down */
