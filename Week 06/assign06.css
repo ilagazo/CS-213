@@ -1,0 +1,93 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.item1 { 
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.item1 > a > img {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+
+.item2 { 
+  grid-area: left; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item2 > img {
+  height: 300px;
+  padding: 10px;
+}
+
+.item3 { 
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+
+ .item3 > img {
+   width: 400px;
+   height: 300px;
+   padding: 10px;
+ }
+
+.item4 { grid-area: footer; }
+
+.item5 { 
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.item5 > a {
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'left left main main main main'
+    'left left main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: rgba(0, 0, 0, 0.5);;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.753);
+  text-align: center;
+}
+
+h2, h3 {
+  text-decoration: underline;
+  line-height: 0px;
+}
+
+ /* Medium Devices and down */
+ @media (max-width: 768px) {
+  img {
+      max-width: 400px;
+      width: 100%;
+  }
+}
