@@ -55,15 +55,37 @@ body {
 
  .item3 > a:hover {
   background-color: gray;
+  text-decoration: none;
+}
+
+.item3 > a {
+  text-decoration: none;
+  color: black;
+}
+
+.item3 > a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .item4 { 
   grid-area: footer;
-  font-size: 12px; 
+  font-size: 15px; 
+}
+
+.item4 > p > a {
+  text-decoration: none;
+  color: black;
 }
 
 .item4 > p > a:hover {
   background-color: gray;
+  text-decoration: none;
+}
+
+.item4 > p > a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .item5 { 
@@ -80,6 +102,7 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   text-decoration: none;
+  color: black;
 }
 
 .item5 > a:hover {
@@ -114,6 +137,14 @@ h2, h3 {
   text-decoration: underline;
   line-height: 0px;
   flex-wrap: wrap;
+}
+
+/* Large devices and down */
+@media screen and (max-width: 992px) {
+  .grid-container {
+      max-width: 100%;
+      max-height: 100%;
+  }
 }
 
  /* Medium Devices and down */
