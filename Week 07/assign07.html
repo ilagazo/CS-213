@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- https://codepen.io/andarch/pen/fJcib -->
 
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="assign07.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Mortgage Calculator</title>
 </head>
 
 <body>
-    <h1>JavaScript Mortgage Calculator</h1>
-    <h2>Please enter the following information.</h2>
-    <form>
-        <!-- APR (Input)-->
-        <label for="aprLabel">Annual Percentage Rate (APR):</label>
-        <input type="number" id="apr" name="aprLabel"><br><br>
-        <script src="getAPR.js"></script>
+    <script src="assign07.js"></script>
+    <header>
+        <h1>JavaScript Mortgage Calculator</h1>
+    </header>
+    <div class="container">
+        <div class="item">
+            <form action="">
+                <h2>Calculate Your Monthly Mortgage Payment.</h2><br>
+                <!-- APR (Input)-->
+                <label for="aprLabel">Annual Percentage Rate % (APR):</label>
+                <input type="number" id="apr" name="aprLabel"><br>
+                <p id="aprError"></p><br>
 
-        <!-- Loan Term (Input)-->
-        <label for="termLabel">Loan Term (Years)</label>
-        <input type="number" id="term" name="termLabel"><br><br>
-        <script src="getTerm.js"></script>
+                <!-- Loan Term (Input)-->
+                <label for="termLabel">Loan Term (Years)</label>
+                <input type="number" id="term" name="termLabel"><br>
+                <p id="termError"></p><br>
 
-        <!-- Loan Amount (Input)-->
-        <label for="amtLabel">Loan Amount (Dollars):</label>
-        <input type="number" id="amount" name="amtLabel"><br><br>
-        <script src="getAmount.js"></script>
+                <!-- Loan Amount (Input)-->
+                <label for="amtLabel">Loan Amount (Dollars):</label>
+                <input type="number" id="amount" name="amtLabel"><br>
+                <p id="amtError"></p><br>
 
-        <!--Monthly Payment (Display)-->
-        <p>Monthly Payment:</p>
+                <!--Monthly Payment (Display)-->
+                <label for="monthLabel">Monthly Payment:</label>
+                <output type="number" name="monthLabel" id="payment"></output><br><br>
 
-        <!-- Submit Button-->
-        <script src="getMonthlyPayment.js"></script>
-        <button id="calculate" type="button" onclick="getMonthlyPayment()">Calculate Payment</button>
-        
-        <!-- Clear Button-->
-        <button id="clear" type="reset" onclick="reset()">Clear Form</button>
-        <p id="aprError"></p>
-        <p id="termError"></p>
-        <P id="amtError"></P>
-    </form>
+                <!-- Submit Button-->
+                <button id="calculate" type="button" onclick="getMonthlyPayment()">Calculate Payment</button>
+
+                <!-- Clear Button-->
+                <button id="clear" type="reset" onclick="reset()">Clear Form</button>
+            </form>
+        </div>
+        <div class="item">
+            <h3>What do all these grown-up terms mean?</h3>
+            <p><b>Mortgage:</b> A loan taken out to buy a property or land.<br><br>
+                <b>Annual Percentage Rate (APR):</b> The percentage cost of borrowing money per year.<br><br>
+                <b>Loan Term:</b> A set period of time for the loan to be repaid.<br><br>
+                <b>Loan Amount:</b> The initial amount of money you will borrow.<br><br>
+                <b>Monthly Payment:</b> The cost of your monthly payment to repay your loan.<br></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>The background image on this page was pulled from Google Images and all ownership belongs to its
+            respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                Assignments</a>
+        </p>
+    </footer>
 </body>
 
 </html>

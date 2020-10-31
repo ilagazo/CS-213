@@ -1,0 +1,85 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('mortgage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    letter-spacing: 0.05em;
+}
+
+
+h1 {
+    font-size: 40px;
+    color: black;
+}
+
+h1, h2, h3{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+/* .container>div {
+    margin: 5px;
+    padding: 5px;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+} */
+
+.item {
+    width: auto;
+    height: auto;
+    margin: 12px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 12px rgb(63, 63, 63);
+    position: relative;
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 10px;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #fbd46d;
+}
+
+ /* Large devices and down */
+ @media screen and (max-width: 992px) {
+    .container {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Medium Devices and down */
+@media (max-width: 768px) {
+    .container {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
