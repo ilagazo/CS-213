@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assign07.css">
+    <title>JavaScript Mortgage Calculator</title>
+</head>
+
+<body>
+    <h1>JavaScript Mortgage Calculator</h1>
+    <h2>Please enter the following information.</h2>
+    <form>
+        <!-- APR (Input)-->
+        <label for="aprLabel">Annual Percentage Rate (APR):</label>
+        <input type="number" id="apr" name="aprLabel"><br><br>
+        <script src="getAPR.js"></script>
+
+        <!-- Loan Term (Input)-->
+        <label for="termLabel">Loan Term (Years)</label>
+        <input type="number" id="term" name="termLabel"><br><br>
+        <script src="getTerm.js"></script>
+
+        <!-- Loan Amount (Input)-->
+        <label for="amtLabel">Loan Amount (Dollars):</label>
+        <input type="number" id="amount" name="amtLabel"><br><br>
+        <script src="getAmount.js"></script>
+
+        <!--Monthly Payment (Display)-->
+        <p>Monthly Payment:</p>
+
+        <!-- Submit Button-->
+        <script src="getMonthlyPayment.js"></script>
+        <button id="calculate" type="button" onclick="getMonthlyPayment()">Calculate Payment</button>
+        
+
+        <!-- Clear Button-->
+        <button id="clear" type="reset" onclick="reset()">Clear Form</button>
+        <p id="aprError"></p>
+        <p id="termError"></p>
+        <P id="amtError"></P>
+    </form>
+</body>
+
+</html>
