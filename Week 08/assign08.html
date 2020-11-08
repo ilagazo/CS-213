@@ -3,119 +3,130 @@
 
 <head>
     <link rel="stylesheet" href="assign08.css">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josie's Mountain Retreat & Spa</title>
+    <title>Josie's Mountain Spa Retreat: Checkout</title>
 </head>
 
 <body>
     <script src="assign08.js"></script>
-    <h1>Josie's Mountain Retreat & Spa</h1>
+    <h1>Josie's Mountain Spa Retreat</h1>
+    <h2>Product Choice and Payment</h2>
     <!--Products (Choice/Input)-->
-    <h2>Products:</h2>
-    <p>All Packages include complimentary meal and a choice between pedicure or manicure.</p>
+    <h3>Products:</h3>
+        <form>
+            <div class="product_container">
+                <div class="product">
+                    <p>Price: $100</p>
+                    <img src="swedish.jpg" alt="Swedish Massage Package">
+                    <input type="number" id="prod0" name="item_0" min="0" max="5" value="0" oninput="calculateTotal()">
+                    <br><br><label for="prod0">Swedish Massage Package<br>(Max. 5 per customer)</label>
+                </div>
 
-    <form>
-        <div class="product_container">
-            <div class="product">
-                <p>Price: $100</p>
-                <img src="swedish.jpg" alt="Swedish Massage Package">
-                <input type="number" id="prod0" name="item_0" min="0" max="5" value="0" oninput="calculateTotal()">
-                <br><br><label for="item_0">Swedish Massage Package<br>(Max. 5 per customer)</label>
-            </div>
+                <div class="product">
+                    <p>Price: $100</p>
+                    <img src="deepTissue.jpg" alt="Deep Tissue Massage Package">
+                    <input type="number" id="prod4" name="item_4" min="0" max="3" value="0" oninput="calculateTotal()">
+                    <br><br><label for="prod4">Deep Tissue Massage Package<br>(Max. 3 per customer)</label>
+                </div>
 
-            <div class="product">
-                <p>Price: $100</p>
-                <img src="deepTissue.jpg" alt="Deep Tissue Massage Package">
-                <input type="number" id="prod4" name="item_4" min="0" max="3" value="0" oninput="calculateTotal()">
-                <br><br><label for="item_3">Deep Tissue Massage Package<br>(Max. 3 per customer)</label>
-            </div>
+                <div class="product">
+                    <p>Price: $185</p>
+                    <img src="coupleMassage.jpg" alt="Couples Massage Package">
+                    <input type="number" id="prod1" name="item_1" min="0" max="2" value="0" oninput="calculateTotal()">
+                    <br><br><label for="prod1">Couples Massage<br>(Max. 2 per customer)</label>
+                </div>
 
-            <div class="product">
-                <p>Price: $185</p>
-                <img src="coupleMassage.jpg" alt="Couples Massage Package">
-                <input type="number" id="prod1" name="item_1" min="0" max="2" value="0" oninput="calculateTotal()">
-                <br><br><label for="item_1">Couples Massage<br>(Max. 2 per customer)</label>
-            </div>
+                <div class="product">
+                    <p>Price: $125</p>
+                    <img src="aromatherapy.jpg" alt="Aromatherapy Treatment Package">
+                    <input type="number" id="prod2" name="item_2" min="0" max="1" value="0" oninput="calculateTotal()">
+                    <br><br><label for="prod2">Aromatherapy Treatment Package<br>(Max. 1 per customer)</label>
+                </div>
 
-            <div class="product">
-                <p>Price: $125</p>
-                <img src="aromatherapy.jpg" alt="Aromatherapy Treatment Package">
-                <input type="number" id="prod2" name="item_2" min="0" max="1" value="0" oninput="calculateTotal()">
-                <br><br><label for="item_2">Aromatherapy Treatment Package<br>(Max. 1 per customer)</label>
+                <div class="product">
+                    <p>Price: $125</p>
+                    <img src="hotStone.jpg" alt="Hot Stone Massage Package">
+                    <input type="number" id="prod3" name="item_3" min="0" max="1" value="0" oninput="calculateTotal()">
+                    <br><br><label for="prod3">Hot Stone Massage Package<br>(Max. 1 per customer)</label>
+                </div>
             </div>
+            <p class="caption">All Packages include complimentary meal and a choice between pedicure or manicure.</p>
+        </form>
 
-            <div class="product">
-                <p>Price: $125</p>
-                <img src="hotStone.jpg" alt="Hot Stone Massage Package">
-                <input type="number" id="prod3" name="item_3" min="0" max="1" value="0" oninput="calculateTotal()">
-                <br><br><label for="item_3">Hot Stone Massage Package<br>(Max. 1 per customer)</label>
-            </div>
+        <!--Total (Display)-->
+        <div class="total_container">
+            <form>
+                <label for="totalAmt">Total:</label>
+                <output name="total" id="totalAmt">0.00</output>
+            </form>
         </div>
-    </form>
 
-    <!--Total (Display)-->
-    <div class="total_container">
-        <form>
-            <label for="total">Total:</label>
-            <output type="number" name="total" id="totalAmt">0.00</output><br><br>
-        </form>
-    </div>
+        <!-- Customer Payment & Payment Section-->
+        <h3>Customer Information & Payment:</h3>
+        <div class="credit_container">
+            <form>
+                <!--First Name Input-->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="first_name" required="required"><br><br>
 
-    <h3>Customer Information:</h3>
-    <p>Certified Secure Checkout </p>
-    <div class="credit_container">
-        <form>
-            <!--First Name Input-->
-            <label for="first_name">First Name:</label>
-            <input type="text" id="firstName" name="first_name" required="required">
+                <!--Last Name Input-->
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="last_name" required="required"><br><br>
 
-            <!--Last Name Input-->
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="lastName" name="last_name" required="required">
-
-            <!--Address Input-->
-            <label for="address">Address:(Street Address, City, State, and Zip)</label>
-            <input type="text" name="address" required="required">
+                <!--Address Input-->
+                <label for="address_input">Address:(Street Address, City, State, and Zip)</label>
+                <input type="text" id="address_input" name="address" required="required"><br><br>
 
 
-            <!--Phone Input-->
-            <label for="phone">Phone Number (i.e. 951-111-1111):</label>
-            <input type="text" id="phone_input" name="phone" minlength="1" maxlength="12" required="required"
-                onchange="validatePhone()">
-            <p id="phone_error"></p>
+                <!--Phone Input-->
+                <label for="phone_input">Phone Number (i.e. 951-111-1111):</label>
+                <input type="text" id="phone_input" name="phone" minlength="1" maxlength="12" required="required"
+                    onchange="validatePhone()">
+                <p id="phone_error"></p>
 
-            <div class="credit_item">
-                <!--Credit Card Type (Radio)-->
-                <input type="radio" id="visa" name="card" value="visa" required="required">
-                <label for="card">Visa</label>
+                <div class="credit_item">
+                    <!--Credit Card Type (Radio)-->
+                    <input type="radio" id="visa" name="card" value="visa" required="required">
+                    <label for="visa">Visa</label>
 
-                <input type="radio" id="americanExp" name="card" value="americanExp" required="required">
-                <label for="card">American Express</label>
+                    <input type="radio" id="americanExp" name="card" value="americanExp" required="required">
+                    <label for="americanExp">American Express</label>
 
-                <input type="radio" id="mastercard" name="card" value="mastercard" required="required">
-                <label for="card">Mastercard</label>
-                <p id="creditType_error"></p>
-            </div>
+                    <input type="radio" id="mastercard" name="card" value="mastercard" required="required">
+                    <label for="mastercard">Mastercard</label>
+                    <p id="creditType_error"></p>
+                </div>
 
-            <!--Credit Card # Input-->
-            <label for="credit_card">Credit Card # (i.e. 1111 1111 1111 1111):</label>
-            <input type="text" id="card_number" name="credit_card" required="required" minlength="1" maxlength="19"
-                onchange="validateCreditCard()">
-            <p id="credit_error"></p>
+                <!--Credit Card # Input-->
+                <label for="card_number">Credit Card # (i.e. 1111 1111 1111 1111):</label>
+                <input type="text" id="card_number" name="credit_card" required="required" minlength="1" maxlength="19"
+                    onchange="validateCreditCard()">
+                <p id="credit_error"></p>
 
-            <!--Credit Card Expiration Date-->
-            <label for="exp_date">Credit Card Exp. Date (i.e. 01/2020):</label>
-            <input type="text" id="card_exp" name="exp_date" required="required" minlength="1" maxlength="7"
-                onchange="validateCreditDate()">
-            <p id="date_error"></p>
+                <!--Credit Card Expiration Date-->
+                <label for="card_exp">Credit Card Exp. Date (i.e. 01/2020):</label>
+                <input type="text" id="card_exp" name="exp_date" required="required" minlength="1" maxlength="7"
+                    onchange="validateCreditDate()">
+                <p id="date_error"></p>
 
-            <!--Submit Button-->
-            <button type="button" onclick="validate()">Submit</button>
+                <!--Submit Button-->
+                <button type="button" onclick="validate()">Submit</button>
 
-            <!--Reset Button-->
-            <button type="reset" onclick="setFocus()">Clear Form</button>
-        </form>
-    </div>
+                <!--Reset Button-->
+                <button type="reset" onclick="setFocus()">Clear Form</button>
+            </form>
+        </div>
+        <p class="caption">Certified Secure Checkout.<br><b>Note:</b> Purchases are refundable. Please contact a member of
+            our staff to learn more.
+            <br>Phone #:951-391-9320<br>Office Hours: 8 A.M - 8 P.M MST (M - SAT.)</p>
+
+        <footer>
+            <p>Image on this page were pulled from Google Images and all ownership belongs to its
+                respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                    Assignments</a>
+            </p>
+        </footer>
 </body>
 
 </html>

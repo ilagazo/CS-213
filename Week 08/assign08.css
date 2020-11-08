@@ -1,15 +1,26 @@
 body {
-    background-color: white;
+    background-color: #f6f6f6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    background-color: #aaaaaa;
+    text-align: center;
+    box-shadow: 0 0 12px rgb(63, 63, 63);
+}
+
+.caption {
+    text-align: center;
+    font-size: 15px;
 }
 
 input:invalid {
-    border: 2px solid red;
+    border: 2px solid #a20a0a;
 }
-
-input:valid {
-    border: 1px solid black;
-}
-
 
 .product_container {
     padding: 10px;
@@ -21,46 +32,101 @@ input:valid {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color:blue;
+    background-color: #ffe2e2;
     box-shadow: 0 0 12px rgb(63, 63, 63);
 }
 
 .product {
-    padding: 5px;
-    width: 300px;
+    padding: 2px;
+    width: 275px;
     height: auto;
-    margin: 12px;
-    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    background-color: #f6f6f6;
     box-shadow: 0 0 12px rgb(63, 63, 63);
     border-radius: 10px;
-    color: purple;
+    color: black;
 }
 
-.product > img {
-    width: 300px;
+.product>img {
+    width: 275px;
     height: 200px;
 }
 
 .total_container {
     text-align: center;
     font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .credit_container {
     max-width: 100%;
+    height: auto;
+    width: auto;
     display: flex;
-    background-color: lightblue;
+    box-shadow: 0 0 12px rgb(63, 63, 63);
+    background-color: #ffc7c7;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     margin: auto auto;
     padding: 10px;
-    color: red;
+    font-size: 15px;
+    color: black;
+
 }
 
 .credit_item {
     flex-direction: row;
     padding: 10px;
-    text-align: center;
     color: black;
+}
+
+button {
+    height: 25px;
+    font-size: 18px;
+}
+
+#credit_error,
+#date_error,
+#creditType_error,
+#phone_error {
+    font-size: 12px;
+    color: red;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 10px;
+    color: white;
+    background-color: #aaaaaa;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #ffe2e2;
+}
+
+/* Large devices and down */
+@media screen and (max-width: 992px) {
+    .container {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Medium Devices and down */
+@media (max-width: 768px) {
+    .container {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
