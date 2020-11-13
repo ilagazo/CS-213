@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="assign09.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josie's Mountain Spa Retreat: Checkout</title>
 </head>
+
 <body>
-    <p>This will be assignment #9</p>
+    <script src="assign09.js"></script>
+
+    <!-- Part 1: JS AJAX -->
+    <form action="">
+        <select name="cities" onchange="loadDoc(this.value)">
+            <option value="">Select a country:</option>
+            <option value="russia.txt">Russia</option>
+            <option value="mexico.txt">Mexico</option>
+            <option value="canada.txt">Canada</option>
+            <option value="usa.txt">USA</option>
+        </select>
+    </form>
+
+    <div class="outputBox">
+        <output id="country"></output>
+    </div>
+
+    <!-- Part 2: JS JSON w/ AJAX-->
+    <br>
+    <form action="">
+        <label for="url">Please Enter the Filename:</label>
+        <input type="url" id="url" value="json.txt">
+        <button type="button" onclick="loadFilename()">Search File</button>
+    </form>
+
+    <div class="outputBox">
+        <output id="students"></output>
+    </div>
 </body>
+
 </html>
