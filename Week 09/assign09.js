@@ -1,8 +1,8 @@
 function getCountry(str) {
     var xhttp = new XMLHttpRequest();
-    // var regExp = /^[a-zA-Z]/
+
     if (str === "") {
-        document.getElementById("country").innerHTML = "";
+        document.getElementById("country").innerHTML = "Data will display here";
         return;
     }
 
@@ -45,7 +45,7 @@ function loadFilename() {
             document.getElementById("students").innerHTML = x;
         } else {
             // Error Message for if file not found
-            document.getElementById("students").innerHTML = "ERROR: File was not found. Please check your filename and try again!"
+            document.getElementById("students").innerHTML = "ERROR: File was not found. Please check your filename and try again!";
         }
     };
     xmlhttp.open("GET", url, true);

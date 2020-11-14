@@ -2,19 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="assign09.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josie's Mountain Spa Retreat: Checkout</title>
+    <title>Not Parsing vs Parsing</title>
+    <link rel="stylesheet" href="assign09.css">
 </head>
 
 <body>
     <script src="assign09.js"></script>
+    <h1>Not Parsing vs Parsing</h1>
+
+    <!-- Information-->
+    <hr>
+    <h2>What is Parsing?</h2>
+    <div class="outputBox">
+        <p>Simply put, parsing is the method used to convert one string of data into a different type of data.
+            Fundamentally, it is significant because different programs/entities need data to be in different formats.
+            Parsing enable this to happan and the data to be comphrendable to its respective programs.
+            <br><br><b>BELOW ARE EXAMPLES TO SHOW YOU THE DIFFERENCE BETWEEN PARSING AND NOT PARSING DATA</b></p>
+    </div>
+    <hr>
 
     <!-- Part 1: JS AJAX -->
-    <form action="">
-        <select name="cities" onchange="getCountry(this.value)">
-            <option value="">Select a country:</option>
+    <h3>Example: Not Parsing</h3>
+    <form>
+        <label for="cities">Please Select a Country</label>
+        <select id="cities" onchange="getCountry(this.value)">
+            <option value="">Select a country</option>
             <option value="russia.txt">Russia</option>
             <option value="mexico.txt">Mexico</option>
             <option value="canada.txt">Canada</option>
@@ -23,21 +37,39 @@
     </form>
 
     <div class="outputBox">
-        <output id="country"></output>
+        <p id="country">Data will display here</p>
     </div>
+    <hr>
 
     <!-- Part 2: JS JSON w/ AJAX-->
-    <br>
-    <form action="">
+    <h3>Example: Parsing</h3>
+    <form>
         <label for="url">Please Enter the Filename:</label>
         <input type="text" id="url" value="json.txt">
         <button type="button" onclick="loadFilename()">Search File</button>
     </form>
 
     <div class="outputBox">
-        <!-- <output id="students"></output> -->
         <table id="students"></table>
     </div>
+
+    <!-- Sumamry Section-->
+    <h3>Lesson Learned</h3>
+    <div class="outputBox">
+        <p>Notice the formatting and output of the two examples above. You will notice that one
+            is a little wonky looking, while the other formatted neatly. The first example had .txt
+            files that were not formatted in a way that allowed for effective parsing. It could be parsed,
+            but would be diffcult and take time. The second example had .txt files formatted in a way that
+            kept parsing in mind, thus parsing it was relatively easy. Overall, parsing is extremely useful
+            and should be considered when sending or recieveing data from a server.</p>
+    </div>
+
+    <footer>
+        <p>Image on this page were pulled from Google Images and all ownership belongs to its
+            respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                Assignments</a>
+        </p>
+    </footer>
 </body>
 
 </html>
