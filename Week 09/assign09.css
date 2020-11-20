@@ -1,0 +1,88 @@
+body {
+    background-image: url("programming1.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 0.25em;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    background-color: #1c2b2d;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border: 3px solid #1f6f8b;
+}
+
+label {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+select,
+input {
+    height: 20px;
+}
+
+.outputBox {
+    border: 3px solid #99a8b2;
+    text-align: center;
+    box-shadow: 0 0 12px rgb(82, 77, 77);
+    background-color: #1c2b2d;
+    padding: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+#country {
+    white-space: pre-wrap;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid #99a8b2;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    background-color: #1f6f8b;
+    box-shadow: 0 0 12px rgb(63, 63, 63);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #e6d5b8;
+}
+
+/* Large devices and down */
+@media screen and (max-width: 992px) {
+    .outputBox {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Medium Devices and down */
+@media (max-width: 768px) {
+    .outputBox {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
