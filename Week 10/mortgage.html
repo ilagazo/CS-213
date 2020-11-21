@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="mortgage.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mortgage Calculator</title>
+</head>
+
+<body>
+    <script src="mortgage.js"></script>
+    <header>
+        <h1>JavaScript Mortgage Calculator</h1>
+    </header>
+    <div class="container">
+        <div class="item">
+            <form action="mortgage.php" method="GET">
+                <h2>Calculate Your Monthly Mortgage Payment.</h2><br>
+                <!-- APR (Input)-->
+                <label for="apr">Annual Percentage Rate %(APR):
+                    <input type="number" id="apr" min="0.00" max="25.00"><br>
+                </label>
+                <p id="aprError"></p><br>
+
+                <!-- Loan Term (Input)-->
+                <label for="term">Loan Term (Years)</label>
+                <input type="number" id="term" min="1" max="40"><br>
+                <p id="termError"></p><br>
+
+                <!-- Loan Amount (Input)-->
+                <label for="amount">Loan Amount (Dollars):</label>
+                <input type="number" id="amount" min="1"><br>
+                <p id="amtError"></p><br>
+
+                <!--Monthly Payment (Display)-->
+                <label for="payment">Monthly Payment:</label>
+                <output id="payment"></output><br><br>
+
+                <!-- Submit Button-->
+                <button id="calculate" type="submit">Calculate Payment</button>
+
+                <!-- Clear Button-->
+                <button id="clear" type="reset" onclick="reset()">Clear Form</button>
+            </form>
+        </div>
+
+        <div class="item">
+            <h3>Mortgage Payment Formula</h3>
+            <p><b>M = P [ r(1 +r)^n / ((1+r)^n - 1)</b><br><br>
+                <b>M</b> = total monthly mortgage payment.<br>
+                <b>P</b> = the pirncipal loan amount.<br>
+                <b>r</b> = your monthly interest rate. ((APR * 100) / 12)<br>
+                <b>n</b> = number of payments over the loan's lifetime (Years * 12)
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>What do all these grown-up terms mean?</h3>
+            <p><b>Mortgage:</b> A loan taken out to buy a property or land.<br><br>
+                <b>Annual Percentage Rate (APR):</b> The percentage cost of borrowing money per year.<br><br>
+                <b>Loan Term:</b> A set period of time for the loan to be repaid.<br><br>
+                <b>Loan Amount:</b> The initial amount of money you will borrow.<br><br>
+                <b>Monthly Payment:</b> The cost of your monthly payment to repay your loan.<br></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>The background image on this page was pulled from Google Images and all ownership belongs to its
+            respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                Assignments</a>
+        </p>
+    </footer>
+</body>
+
+</html>
