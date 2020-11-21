@@ -12,8 +12,6 @@ function getAPR() {
   }
   document.getElementById("aprError").innerHTML = errorText;
   document.getElementById("apr").focus();
-
-  return value;
 }
 
 function getTerm() {
@@ -36,8 +34,6 @@ function getTerm() {
   }
   document.getElementById("termError").innerText = errorText;
   document.getElementById("term").focus();
-
-  return loanTerm;
 }
 
 function getAmount() {
@@ -55,8 +51,6 @@ function getAmount() {
   }
   document.getElementById("amtError").innerHTML = errorText;
   document.getElementById("amount").focus();
-
-  return loanAmt;
 }
 
 function reset() {
@@ -66,24 +60,3 @@ function reset() {
   document.getElementById("amount").reset();
   document.getElementById("payment").reset();
 }
-
-// function getMonthlyPayment() {
-//   var loanAmt, term, apr, monRate, numPayments, monPayment;
-
-//   monPayment = 0;
-//   term = getTerm();
-//   apr = getAPR();
-//   loanAmt = getAmount();
-
-//   if (term === "" || apr === "" || loanAmt === "") {
-//     document.getElementById("payment").value = monPayment;
-//   } else {
-//     monRate = apr / 100 / 12;
-//     numPayments = term * 12;
-//     monPayment =
-//       loanAmt *
-//       ((monRate * Math.pow(1 + monRate, numPayments)) /
-//         (Math.pow(1 + monRate, numPayments) - 1));
-//     document.getElementById("payment").value = monPayment.toFixed(2);
-//   }
-// }
