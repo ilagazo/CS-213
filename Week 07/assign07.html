@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- https://codepen.io/andarch/pen/fJcib -->
+<!-- Note to Instructor: The only thing I couldn't figure out was why my focus wasn't working for my APR input. 
+    It works for the other two. I would appreciate your input on this matter since this is my first time using 
+    JS and woudl love to learn more.
+
+    Author: Ivanro Lagazo
+-->
 
 <head>
     <link rel="stylesheet" href="assign07.css">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Mortgage Calculator</title>
 </head>
@@ -15,26 +21,27 @@
     </header>
     <div class="container">
         <div class="item">
-            <form action="">
+            <form>
                 <h2>Calculate Your Monthly Mortgage Payment.</h2><br>
                 <!-- APR (Input)-->
-                <label for="aprLabel">Annual Percentage Rate % (APR):</label>
-                <input type="number" id="apr" name="aprLabel"><br>
+                <label for="apr">Annual Percentage Rate %(APR):
+                    <input type="number" id="apr" min="0.00" max="25.00" onchange="getMonthlyPayment()"><br>
+                </label>
                 <p id="aprError"></p><br>
 
                 <!-- Loan Term (Input)-->
-                <label for="termLabel">Loan Term (Years)</label>
-                <input type="number" id="term" name="termLabel"><br>
+                <label for="term">Loan Term (Years)</label>
+                <input type="number" id="term" min="1" max="40" onchange="getMonthlyPayment()"><br>
                 <p id="termError"></p><br>
 
                 <!-- Loan Amount (Input)-->
-                <label for="amtLabel">Loan Amount (Dollars):</label>
-                <input type="number" id="amount" name="amtLabel"><br>
+                <label for="amount">Loan Amount (Dollars):</label>
+                <input type="number" id="amount" min="1" onchange="getMonthlyPayment()"><br>
                 <p id="amtError"></p><br>
 
                 <!--Monthly Payment (Display)-->
-                <label for="monthLabel">Monthly Payment:</label>
-                <output type="number" name="monthLabel" id="payment"></output><br><br>
+                <label for="payment">Monthly Payment:</label>
+                <output id="payment"></output><br><br>
 
                 <!-- Submit Button-->
                 <button id="calculate" type="button" onclick="getMonthlyPayment()">Calculate Payment</button>
@@ -43,6 +50,17 @@
                 <button id="clear" type="reset" onclick="reset()">Clear Form</button>
             </form>
         </div>
+
+        <div class="item">
+            <h3>Mortgage Payment Formula</h3>
+            <p><b>M = P [ r(1 +r)^n / ((1+r)^n - 1)</b><br><br>
+                <b>M</b> = total monthly mortgage payment.<br>
+                <b>P</b> = the pirncipal loan amount.<br>
+                <b>r</b> = your monthly interest rate. ((APR * 100) / 12)<br>
+                <b>n</b> = number of payments over the loan's lifetime (Years * 12)
+            </p>
+        </div>
+
         <div class="item">
             <h3>What do all these grown-up terms mean?</h3>
             <p><b>Mortgage:</b> A loan taken out to buy a property or land.<br><br>
