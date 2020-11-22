@@ -12,7 +12,6 @@
      
      // create an array of filenames of files from the current directory
      $files = scandir($folder);
-    // $files = array("Volvo", "BMW","Toyota");
      $directory = Array();     // create a array object to store a list of objects.
 
 
@@ -29,20 +28,16 @@
      * To get the size of an array in php use the sizeof function:  $len = sizeof($files);
      *****************************************************************/
     $len = sizeof($files);
+     for ($i = 0; $i < $len; $i++) {
+      $directory[$i] = new fileN();
 
-     for ($i = 0; $i <= $len; $i++) {
-     $directory[$i] = new fileN();
-
-    $directory[$i]->fileName = $files[$i];
-    $directory[$i]->fileType = filetype($fileName);
-    $directory[$i]->cwd = 
-
+      $directory[$i]->fileName = $files[$i];
+      $directory[$i]->fileType = filetype($directory[$i]->fileName);
+      $directory[$i]->cwd = $cwd;
     }
-     
+
      /*******************End of your Code *******************************************/
 
      // convert the PHP array of objects to a JSON string
      $str = json_encode($directory);
      print "\n $str \n";   //output the json string - The string is sent to the browser.      
- ?>
-

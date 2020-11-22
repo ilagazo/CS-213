@@ -1,0 +1,14 @@
+[
+{"fileName":".","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"..","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"assign10.html","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"assign10.js","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"assign10.php","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"example.php","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"mortgage.css","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"mortgage.html","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"mortgage.jpg","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"mortgage.js","fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":"mortgage.php","fileType":true,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"},
+{"fileName":null,"fileType":false,"cwd":"C:\\Users\\Ivanro Lagazo\\Desktop\\BYU-I\\Fall 2020\\CS 213\\cs213\\Week 10"}
+]
