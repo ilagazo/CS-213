@@ -28,6 +28,7 @@
      * To get the size of an array in php use the sizeof function:  $len = sizeof($files);
      *****************************************************************/
     $len = sizeof($files);
+
      for ($i = 0; $i < $len; $i++) {
       $directory[$i] = new fileN();
 

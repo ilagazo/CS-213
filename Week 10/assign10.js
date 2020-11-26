@@ -8,7 +8,7 @@ function callback() {
             jsObj = JSON.parse(this.responseText);
             display = table;
 
-            // FOR loop to display the table and reference JSON Object appropriately
+            // FOR loop to display the table and reference JavaScript Object appropriately
             for (i in jsObj) {
                 display += "<tr><td>" + jsObj[i].fileName + "</td>";
                 display += "<td>" + jsObj[i].fileType + "</td>";
