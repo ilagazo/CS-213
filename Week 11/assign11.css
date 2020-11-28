@@ -74,7 +74,23 @@ input:invalid {
     padding: 10px;
     font-size: 15px;
     color: black;
+}
 
+.orderStatus_container {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 12px rgb(63, 63, 63);
+    background-color: #ffe2e2;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto auto;
+    padding: 20px;
+    font-size: 25px;
+    color: black;
 }
 
 .credit_item {
@@ -86,6 +102,11 @@ input:invalid {
 button {
     height: 25px;
     font-size: 18px;
+}
+
+.banner > img {
+    width: 100%;
+    height: 400px;
 }
 
 #credit_error,
