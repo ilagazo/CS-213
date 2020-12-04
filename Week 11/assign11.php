@@ -13,8 +13,7 @@ $couple = $_POST["item_1"];
 $aroma = $_POST["item_2"];
 $hotStone = $_POST["item_3"];
 
-function calculateTotal($swedish, $deepTissue, $couple, $aroma, $hotStone)
-{
+function calculateTotal($swedish, $deepTissue, $couple, $aroma, $hotStone) {
     $cost_0_4 = 100;
     $cost_1 = 185;
     $cost_2_3 = 125;
