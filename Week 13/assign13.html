@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Parsing vs Parsing</title>
+    <link rel="stylesheet" href="assign13.css">
+</head>
+
+<body >
+    <script src="assign13.js"></script>
+    <form action="assign13.php" method="POST">
+
+        <!-- onchange="validatePerformance()" -->
+        <!-- Selecting Performance Type -->
+        Please choose Performance Type:<br>
+        <input type="radio" id="solo" name="performance" value="solo" onclick="hide()" required="required">
+        <label for="solo">Solo</label><br>
+        <input type="radio" id="duet" name="performance" value="duet" onclick="showHidden()" required="required">
+        <label for="duet">Duet</label><br>
+        <input type="radio" id="concerto" name="performance" value="concerto" onclick="hide()" required="required">
+        <label for="concerto">Concerto</label><br>
+
+        <!-- Student #1 Input -->
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="first_name" required="required"><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="last_name" required="required"><br>
+        <label for="studentID">Student Identification(ID) #:</label>
+        <input type="number" id="studentID" name="student_id" required="required"><br><br>
+
+        <!-- Student #2 Input -->
+        <div id="hidden_div" hidden>
+            <label for="firstname_2">First Name of Student #2:</label>
+            <input type="text" id="firstname_2" name="first_name_2" required="required"><br>
+            <label for="lastname_2">Last Name of Student #2:</label>
+            <input type="text" id="lastname_2" name="last_name_2" required="required"><br>
+            <label for="studentID_2">Student #2 Identification(ID):</label>
+            <input type="number" id="studentID_2" name="student_id_2" required="required">
+        </div><br>
+
+        <!-- Choose Skill Level -->
+        <label for="skills">Skill Level:</label>
+        <select id="skills" name="skill" required="required">
+            <option value="">Choose Your Skill Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="pre-advanced">Pre-advanced</option>
+            <option value="advanced">Advanced</option>
+        </select><br>
+
+        <!-- Choose Instrument -->
+        <label for="instruments">Instrument:</label>
+        <select id="instruments" name="instrument" required="required">
+            <option value="">Choose Your Instrument</option>
+            <option value="piano">Piano</option>
+            <option value="voice">Voice</option>
+            <option value="string">String</option>
+            <option value="organ">Organ</option>
+        </select><br>
+
+        <!-- Choose Location -->
+        <label for="locations">Location:</label>
+        <select id="locations" name="location" required="required">
+            <option value="">Choose Your Location</option>
+            <option value="Snow">Snow</option>
+            <option value="Manwaring">Manwaring</option>
+            <option value="Austin">Austin</option>
+        </select><br>
+
+        <!-- Room Input -->
+        <label for="room_number">Room #:</label>
+        <input type="number" id="room_number" name="room" required="required"><br>
+
+        <!-- Time Slot Choice -->
+        <label for="time">Time Slot:</label>
+        <input type="time" id="time" name="time_slot" required="required"><br>
+
+        <!-- Register & Clear Buttons -->
+        <button type="submit" name="register">Register</button>
+        <button type="button" name="clear">Clear</button>
+    </form>
+
+    <p id="output">Hello</p>
+    <p id="demo" ></p>
+</body>
+
+</html>
