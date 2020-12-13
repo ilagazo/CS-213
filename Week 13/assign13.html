@@ -4,86 +4,120 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Parsing vs Parsing</title>
+    <title>Festival Competition Registration</title>
     <link rel="stylesheet" href="assign13.css">
 </head>
 
-<body >
+<body>
     <script src="assign13.js"></script>
+    <header>
+        <h1>Festival Competition</h1>
+    </header>
+
+    <img src="festival.jpg">
+
     <form action="assign13.php" method="POST">
-
-        <!-- onchange="validatePerformance()" -->
+        <h2>Registration Form:</h2>
         <!-- Selecting Performance Type -->
-        Please choose Performance Type:<br>
-        <input type="radio" id="solo" name="performance" value="solo" onclick="hide()" required="required">
-        <label for="solo">Solo</label><br>
-        <input type="radio" id="duet" name="performance" value="duet" onclick="showHidden()" required="required">
-        <label for="duet">Duet</label><br>
-        <input type="radio" id="concerto" name="performance" value="concerto" onclick="hide()" required="required">
-        <label for="concerto">Concerto</label><br>
+        <div class="selection_div">
+            Please choose Performance Type:<br>
+            <input type="radio" id="solo" name="performance" value="solo" onclick="hide()" required="required">
+            <label for="solo">Solo</label>
+            <input type="radio" id="duet" name="performance" value="duet" onclick="showHidden()" required="required">
+            <label for="duet">Duet</label>
+            <input type="radio" id="concerto" name="performance" value="concerto" onclick="hide()" required="required">
+            <label for="concerto">Concerto</label><br>
+        </div>
 
-        <!-- Student #1 Input -->
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="first_name" required="required"><br>
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="last_name" required="required"><br>
-        <label for="studentID">Student Identification(ID) #:</label>
-        <input type="number" id="studentID" name="student_id" required="required"><br><br>
+        <div class="student_div">
+            <div>
+                <!-- Student #1 Input -->
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="first_name" required="required"><br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="last_name" required="required"><br>
+                <label for="studentID">Student ID #:</label>
+                <input type="number" id="studentID" name="student_id" required="required"><br><br>
+            </div>
+            <!-- Student #2 Input -->
+            <div id="hidden_div" hidden>
+                <label for="firstname_2">First Name of Student #2:</label>
+                <input type="text" id="firstname_2" name="first_name_2" required="required"><br>
+                <label for="lastname_2">Last Name of Student #2:</label>
+                <input type="text" id="lastname_2" name="last_name_2" required="required"><br>
+                <label for="studentID_2">Student #2 ID #:</label>
+                <input type="number" id="studentID_2" name="student_id_2" required="required">
+            </div><br>
+        </div>
 
-        <!-- Student #2 Input -->
-        <div id="hidden_div" hidden>
-            <label for="firstname_2">First Name of Student #2:</label>
-            <input type="text" id="firstname_2" name="first_name_2" required="required"><br>
-            <label for="lastname_2">Last Name of Student #2:</label>
-            <input type="text" id="lastname_2" name="last_name_2" required="required"><br>
-            <label for="studentID_2">Student #2 Identification(ID):</label>
-            <input type="number" id="studentID_2" name="student_id_2" required="required">
-        </div><br>
+        <div class="skill_div">
+            <div>
+                <!-- Choose Skill Level -->
+                <label for="skills">Skill Level:</label>
+                <select id="skills" name="skill" required="required">
+                    <option value="">Choose Your Skill Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="pre-advanced">Pre-advanced</option>
+                    <option value="advanced">Advanced</option>
+                </select><br>
+            </div>
+            <div>
+                <!-- Choose Instrument -->
+                <label for="instruments">Instrument:</label>
+                <select id="instruments" name="instrument" required="required">
+                    <option value="">Choose Your Instrument</option>
+                    <option value="piano">Piano</option>
+                    <option value="voice">Voice</option>
+                    <option value="string">String</option>
+                    <option value="organ">Organ</option>
+                </select><br>
+            </div>
+        </div>
 
-        <!-- Choose Skill Level -->
-        <label for="skills">Skill Level:</label>
-        <select id="skills" name="skill" required="required">
-            <option value="">Choose Your Skill Level</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="pre-advanced">Pre-advanced</option>
-            <option value="advanced">Advanced</option>
-        </select><br>
+        <div class="location_div">
+            <div>
+                <!-- Choose Location -->
+                <label for="locations">Location:</label>
+                <select id="locations" name="location" required="required">
+                    <option value="">Choose Your Location</option>
+                    <option value="Snow">Snow</option>
+                    <option value="Manwaring">Manwaring</option>
+                    <option value="Austin">Austin</option>
+                </select><br>
+            </div>
+            <div>
+                <!-- Room Input -->
+                <label for="room_number">Room #:</label>
+                <input type="number" id="room_number" name="room" required="required"><br>
+            </div>
+        </div>
 
-        <!-- Choose Instrument -->
-        <label for="instruments">Instrument:</label>
-        <select id="instruments" name="instrument" required="required">
-            <option value="">Choose Your Instrument</option>
-            <option value="piano">Piano</option>
-            <option value="voice">Voice</option>
-            <option value="string">String</option>
-            <option value="organ">Organ</option>
-        </select><br>
+        <div>
+            <!-- Time Slot Choice -->
+            <label for="time">Time Slot:</label>
+            <input type="time" id="time" name="time_slot" required="required"><br>
+        </div>
 
-        <!-- Choose Location -->
-        <label for="locations">Location:</label>
-        <select id="locations" name="location" required="required">
-            <option value="">Choose Your Location</option>
-            <option value="Snow">Snow</option>
-            <option value="Manwaring">Manwaring</option>
-            <option value="Austin">Austin</option>
-        </select><br>
-
-        <!-- Room Input -->
-        <label for="room_number">Room #:</label>
-        <input type="number" id="room_number" name="room" required="required"><br>
-
-        <!-- Time Slot Choice -->
-        <label for="time">Time Slot:</label>
-        <input type="time" id="time" name="time_slot" required="required"><br>
-
-        <!-- Register & Clear Buttons -->
-        <button type="submit" name="register">Register</button>
-        <button type="button" name="clear">Clear</button>
+        <div class="buttons">
+            <!-- Register & Clear Buttons -->
+            <button type="submit" name="register">Register</button>
+            <button type="reset" name="clear" >Clear</button>
+        </div>
     </form>
 
-    <p id="output">Hello</p>
-    <p id="demo" ></p>
+    <div class="output_text">
+        <h3>Please Confirm Review Your Information Before Submitting:</h3>
+        <p>Work in Progress</p>
+    </div>
+
+
+    <footer>
+        <p>The background image on this page was pulled from Google Images and all ownership belongs to its
+            respective sites.<br><br>Here is a link to my other assignments: <a href="../index.html">CS213
+                Assignments</a>
+        </p>
+    </footer>
 </body>
 
 </html>
